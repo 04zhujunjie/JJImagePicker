@@ -4,7 +4,7 @@
 ![image](https://github.com/04zhujunjie/JJImagePicker/blob/master/Screenshot/JJImagePicker.gif)
 ![image](https://github.com/04zhujunjie/JJImagePicker/blob/master/Screenshot/JJImagePicker-13.png)
 ## 如何安装
-1、将JJimagePicker文件夹（包含JJimagePicker和TOCropViewController文件夹）拖到项目中。
+1、将JJimagePicker文件夹（包含JJimagePicker和TOCropViewController文件夹）拖到项目中。    
 2、导入#import "JJImagePicker.h"
 ## 如何使用
 1、单独使用系统相机或相册时，直接调用以下方法之一：
