@@ -40,7 +40,6 @@ static dispatch_once_t JJImagePickerDispatch_once = 0;
     if (cancel) {
         self.didCancel = cancel;
     }
-    [self setupImagePickerController];
     if (type == JJImagePickerTypeCamera) {
         
         if (![UIImagePickerController isSourceTypeAvailable: UIImagePickerControllerSourceTypeCamera])
@@ -55,9 +54,9 @@ static dispatch_once_t JJImagePickerDispatch_once = 0;
         _type = JJImagePickerTypePhoto;
     }
     
-   
+    self.imagePickerController.allowsEditing = NO;
     [JJImagePicker sharedInstance].viewController = viewController;
-    [viewController presentViewController:_imagePickerController animated:YES completion:nil];
+    [viewController presentViewController:self.imagePickerController animated:YES completion:nil];
     
    
 }
@@ -286,13 +285,13 @@ static dispatch_once_t JJImagePickerDispatch_once = 0;
     }
 }
 
-
-- (void)setupImagePickerController{
+- (UIImagePickerController *)imagePickerController{
     if (!_imagePickerController) {
         _imagePickerController = [[UIImagePickerController alloc] init];
         _imagePickerController.delegate = self;
         _imagePickerController.allowsEditing = NO;
     }
+    return _imagePickerController;
 }
 
 - (void)destroy{

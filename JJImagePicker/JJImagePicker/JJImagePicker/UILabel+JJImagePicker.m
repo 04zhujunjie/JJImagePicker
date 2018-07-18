@@ -52,7 +52,8 @@
         if ([NSStringFromClass([modernBarButton.superview class]) isEqualToString:@"_UIBackButtonContainerView"]) {
             return;
         }
-        if (![JJImagePicker sharedInstance].imagePickerController||![JJImagePicker sharedInstance].cancelText.length) {
+        
+        if (![JJImagePicker sharedInstance].cancelText.length) {
             return;
         }
         [self setupImagePickerText:[JJImagePicker sharedInstance].cancelText];
