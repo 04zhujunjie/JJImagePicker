@@ -36,6 +36,12 @@ typedef NS_ENUM(NSInteger,JJImagePickerType){
 @property (nonatomic ,strong) NSString *retakeText;
 //拍照后，使用照片按钮字体
 @property (nonatomic ,strong) NSString *choosePhotoText;
+//相机，自动
+@property (nonatomic ,strong) NSString *automaticText;
+//相机，打开
+@property (nonatomic ,strong) NSString *openText;
+//相机，关闭
+@property (nonatomic ,strong) NSString *closeText;
 
 + (instancetype) sharedInstance;
 

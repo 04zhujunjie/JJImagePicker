@@ -1,6 +1,6 @@
 //
 //  UILabel+JJImagePicker.m
-//  JJImagePicker
+//  JJImagePickerController
 //
 //  Created by xiaozhu on 2018/7/16.
 //  Copyright © 2018年 xiaozhu. All rights reserved.
@@ -12,36 +12,36 @@
 
 @implementation UILabel (JJImagePicker)
 
-- (void)setJj_ifdo:(BOOL)jj_ifdo{
-    objc_setAssociatedObject(self, @selector(jj_ifdo), @(jj_ifdo), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+- (void)setJj_imagePickerifdo:(BOOL)jj_imagePickerifdo{
+    objc_setAssociatedObject(self, @selector(jj_imagePickerifdo), @(jj_imagePickerifdo), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 
-- (BOOL)jj_ifdo{
+- (BOOL)jj_imagePickerifdo{
     return [objc_getAssociatedObject(self, _cmd) boolValue];
 }
 
 +(void)load{
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken,^{
-        [self jj_exchangeIMP];
+        [self jj_imagePickerExchangeIMP];
     });
 }
 
-+ (void)jj_exchangeIMP{
-    [self jj_exchangeOriginalSelector:@selector(setText:) swizzledSelector:@selector(jj_setText:)];
++ (void)jj_imagePickerExchangeIMP{
+    [self jj_imagePickerExchangeOriginalSelector:@selector(setText:) swizzledSelector:@selector(jj_setImagePickerText:)];
 }
 
 
-- (void)jj_setText:(NSString *)text{
-    [self jj_setText:text];
+- (void)jj_setImagePickerText:(NSString *)text{
+    [self jj_setImagePickerText:text];
 //    NSLog(@"===%@=%@------%@==",NSStringFromClass(self.superview.class),NSStringFromClass(self.superview.superview.class),text);
-    [self setupCancel];
+    [self setupImagePickerCancelText];
 }
 
 
 
-- (void)setupCancel{
+- (void)setupImagePickerCancelText{
     
     if ([NSStringFromClass([self class]) isEqualToString:@"UIButtonLabel"]) {
         UIView *modernBarButton = self.superview;
@@ -55,19 +55,19 @@
         if (![JJImagePicker sharedInstance].imagePickerController||![JJImagePicker sharedInstance].cancelText.length) {
             return;
         }
-        [self setupText:[JJImagePicker sharedInstance].cancelText];
+        [self setupImagePickerText:[JJImagePicker sharedInstance].cancelText];
     }
 }
 
-- (void)setupText:(NSString *)text{
-    if (!self.jj_ifdo) {
-        self.jj_ifdo = YES;
+- (void)setupImagePickerText:(NSString *)text{
+    if (!self.jj_imagePickerifdo) {
+        self.jj_imagePickerifdo = YES;
         self.text = text;
-        self.jj_ifdo = NO;
+        self.jj_imagePickerifdo = NO;
     }
 }
 
-+ (void)jj_exchangeOriginalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector{
++ (void)jj_imagePickerExchangeOriginalSelector:(SEL)originalSelector swizzledSelector:(SEL)swizzledSelector{
     
     Class class = [self class];
     Method originalMethod = class_getInstanceMethod(class, originalSelector);

@@ -16,7 +16,6 @@
 		8B60A7DD20FDCACD008FCF09 /* JJImagePickerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B60A7DC20FDCACD008FCF09 /* JJImagePickerTests.m */; };
 		8B60A7E820FDCACD008FCF09 /* JJImagePickerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B60A7E720FDCACD008FCF09 /* JJImagePickerUITests.m */; };
 		8B60A82620FDCAF6008FCF09 /* JJImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B60A7F820FDCAF6008FCF09 /* JJImagePicker.m */; };
-		8B60A82720FDCAF6008FCF09 /* UILabel+JJImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B60A7F920FDCAF6008FCF09 /* UILabel+JJImagePicker.m */; };
 		8B60A82820FDCAF6008FCF09 /* TOCropViewControllerLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8B60A7FC20FDCAF6008FCF09 /* TOCropViewControllerLocalizable.strings */; };
 		8B60A82920FDCAF6008FCF09 /* TOActivityCroppedImageProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B60A80720FDCAF6008FCF09 /* TOActivityCroppedImageProvider.m */; };
 		8B60A82A20FDCAF6008FCF09 /* UIImage+CropRotate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B60A80820FDCAF6008FCF09 /* UIImage+CropRotate.m */; };
@@ -28,6 +27,7 @@
 		8B60A83020FDCAF6008FCF09 /* TOCropOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B60A82120FDCAF6008FCF09 /* TOCropOverlayView.m */; };
 		8B60A83120FDCAF6008FCF09 /* TOCropToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B60A82220FDCAF6008FCF09 /* TOCropToolbar.m */; };
 		8B60A83220FDCAF6008FCF09 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8B60A82520FDCAF6008FCF09 /* Info.plist */; };
+		8B60A83C20FEDD2D008FCF09 /* UILabel+JJImagePicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B60A83B20FEDD2C008FCF09 /* UILabel+JJImagePicker.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,9 +64,7 @@
 		8B60A7E320FDCACD008FCF09 /* JJImagePickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JJImagePickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B60A7E720FDCACD008FCF09 /* JJImagePickerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JJImagePickerUITests.m; sourceTree = "<group>"; };
 		8B60A7E920FDCACD008FCF09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8B60A7F720FDCAF6008FCF09 /* UILabel+JJImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JJImagePicker.h"; sourceTree = "<group>"; };
 		8B60A7F820FDCAF6008FCF09 /* JJImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JJImagePicker.m; sourceTree = "<group>"; };
-		8B60A7F920FDCAF6008FCF09 /* UILabel+JJImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JJImagePicker.m"; sourceTree = "<group>"; };
 		8B60A7FA20FDCAF6008FCF09 /* JJImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JJImagePicker.h; sourceTree = "<group>"; };
 		8B60A7FD20FDCAF6008FCF09 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
 		8B60A7FE20FDCAF6008FCF09 /* ar */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ar; path = ar.lproj/TOCropViewControllerLocalizable.strings; sourceTree = "<group>"; };
@@ -107,6 +105,8 @@
 		8B60A82320FDCAF6008FCF09 /* TOCropScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCropScrollView.h; sourceTree = "<group>"; };
 		8B60A82420FDCAF6008FCF09 /* TOCropViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TOCropViewController.h; sourceTree = "<group>"; };
 		8B60A82520FDCAF6008FCF09 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8B60A83A20FEDD2C008FCF09 /* UILabel+JJImagePicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+JJImagePicker.h"; sourceTree = "<group>"; };
+		8B60A83B20FEDD2C008FCF09 /* UILabel+JJImagePicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+JJImagePicker.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -201,10 +201,10 @@
 		8B60A7F620FDCAF6008FCF09 /* JJImagePicker */ = {
 			isa = PBXGroup;
 			children = (
+				8B60A83A20FEDD2C008FCF09 /* UILabel+JJImagePicker.h */,
+				8B60A83B20FEDD2C008FCF09 /* UILabel+JJImagePicker.m */,
 				8B60A7FA20FDCAF6008FCF09 /* JJImagePicker.h */,
 				8B60A7F820FDCAF6008FCF09 /* JJImagePicker.m */,
-				8B60A7F720FDCAF6008FCF09 /* UILabel+JJImagePicker.h */,
-				8B60A7F920FDCAF6008FCF09 /* UILabel+JJImagePicker.m */,
 			);
 			path = JJImagePicker;
 			sourceTree = "<group>";
@@ -407,7 +407,6 @@
 				8B60A83020FDCAF6008FCF09 /* TOCropOverlayView.m in Sources */,
 				8B60A7C820FDCACC008FCF09 /* ViewController.m in Sources */,
 				8B60A82C20FDCAF6008FCF09 /* TOCroppedImageAttributes.m in Sources */,
-				8B60A82720FDCAF6008FCF09 /* UILabel+JJImagePicker.m in Sources */,
 				8B60A82D20FDCAF6008FCF09 /* TOCropViewController.m in Sources */,
 				8B60A7D320FDCACC008FCF09 /* main.m in Sources */,
 				8B60A82E20FDCAF6008FCF09 /* TOCropScrollView.m in Sources */,
@@ -415,6 +414,7 @@
 				8B60A82F20FDCAF6008FCF09 /* TOCropView.m in Sources */,
 				8B60A7C520FDCACC008FCF09 /* AppDelegate.m in Sources */,
 				8B60A83120FDCAF6008FCF09 /* TOCropToolbar.m in Sources */,
+				8B60A83C20FEDD2D008FCF09 /* UILabel+JJImagePicker.m in Sources */,
 				8B60A82620FDCAF6008FCF09 /* JJImagePicker.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

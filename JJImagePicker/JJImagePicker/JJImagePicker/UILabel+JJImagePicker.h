@@ -1,6 +1,6 @@
 //
 //  UILabel+JJImagePicker.h
-//  JJImagePicker
+//  JJImagePickerController
 //
 //  Created by xiaozhu on 2018/7/16.
 //  Copyright © 2018年 xiaozhu. All rights reserved.

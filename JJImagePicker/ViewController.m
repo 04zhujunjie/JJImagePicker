@@ -57,6 +57,9 @@
     picker.doneText = _doneTF.text;
     picker.retakeText = _retakeTF.text;
     picker.choosePhotoText = _choosePhotoTF.text;
+    picker.automaticText = @"Automatic";
+    picker.closeText = @"Close";
+    picker.openText = @"打开";
     [picker actionSheetWithTakePhotoTitle:@"拍照" albumTitle:@"从相册选择一张图片" cancelTitle:@"取消" InViewController:self didFinished:^(JJImagePicker *picker, UIImage *image) {
         self.imageView.image = image;
     }];

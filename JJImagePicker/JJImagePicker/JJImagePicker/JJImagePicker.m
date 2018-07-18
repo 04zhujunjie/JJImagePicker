@@ -180,6 +180,44 @@ static dispatch_once_t JJImagePickerDispatch_once = 0;
             [reviewButton setTitle:[JJImagePicker sharedInstance].cancelText forState:UIControlStateNormal];
         }
         
+        UIView *topBar = [viewfinderViewController valueForKey:@"__topBar"];
+        UIView *flashButton = [topBar valueForKey:@"_flashButton"];
+        NSArray *menuItems = [flashButton valueForKey:@"__menuItems"];
+        NSString *key = @"_text";
+        for (int i = 0; i < menuItems.count; i ++) {
+            UIView *itemView = menuItems[i];
+            UILabel *label = [itemView valueForKey:@"__label"];
+            CGRect rect = label.frame;
+            rect.size.width = 80;
+            label.frame = rect;
+            //自动
+            if (i == 0) {
+                if ([JJImagePicker sharedInstance].automaticText.length) {
+                    label.text = [JJImagePicker sharedInstance].automaticText;
+                    [itemView setValue:[JJImagePicker sharedInstance].automaticText forKey:key];
+                }
+            }
+            //打开
+            if (i == 1) {
+                if ([JJImagePicker sharedInstance].openText.length) {
+                    label.text = [JJImagePicker sharedInstance].openText;
+                    [itemView setValue:[JJImagePicker sharedInstance].openText forKey:key];
+                }
+            }
+            
+            //关闭
+            if (i == 2) {
+                if ([JJImagePicker sharedInstance].closeText.length) {
+                    label.text = [JJImagePicker sharedInstance].closeText;
+                    [itemView setValue:[JJImagePicker sharedInstance].closeText forKey:key];
+                }
+            }
+            
+            
+        }
+
+        
+        
         
         UIView *cropOverlay = [viewController valueForKey:@"__cropOverlay"];
         //选择图片
@@ -267,6 +305,9 @@ static dispatch_once_t JJImagePickerDispatch_once = 0;
     [JJImagePicker sharedInstance].cancelText = nil;
     [JJImagePicker sharedInstance].albumText = nil;
     [JJImagePicker sharedInstance].retakeText = nil;
+    [JJImagePicker sharedInstance].automaticText = nil;
+    [JJImagePicker sharedInstance].closeText = nil;
+    [JJImagePicker sharedInstance].openText = nil;
     [JJImagePicker sharedInstance].choosePhotoText = nil;
     [JJImagePicker sharedInstance].isCustomTitle = NO;
     JJImagePickerSharedInstance = nil;
@@ -307,6 +348,27 @@ static dispatch_once_t JJImagePickerDispatch_once = 0;
 - (void)setChoosePhotoText:(NSString *)choosePhotoText{
     _choosePhotoText = choosePhotoText;
     if (_choosePhotoText.length) {
+        self.isCustomTitle = YES;
+    }
+}
+
+- (void)setAutomaticText:(NSString *)automaticText{
+    _automaticText = automaticText;
+    if (_automaticText.length) {
+        self.isCustomTitle = YES;
+    }
+}
+
+- (void)setOpenText:(NSString *)openText{
+    _openText = openText;
+    if (_openText.length) {
+        self.isCustomTitle = YES;
+    }
+}
+
+- (void)setCloseText:(NSString *)closeText{
+    _closeText = closeText;
+    if (_closeText.length) {
         self.isCustomTitle = YES;
     }
 }
